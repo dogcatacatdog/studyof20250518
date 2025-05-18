@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        * {
+            background-color: navy ;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="nameInput" placeholder="Input customer name">
+    <input type="text" id="ageInput" placeholder="Input customer age">
+    <input type="text" id="hobbyInput" placeholder="Input customer hobby">
+    <button id="btn" onclick="addList()">Save in List</button>
+</body>
+
+    <script>
+        let list = [];
+   
+         addList() {
+            const name = document.getElementById('nameInput').value;
+            const age = document.getElementById('ageInput').value;
+            const hobby = document.getElementById('hobbyInput').value;
+
+            list = [...list, { name, age, hobby }];
+            console.log(list);
+            alert('List updated! Check console for details.');
+        }
+
+
+    </script>
+
+</html>

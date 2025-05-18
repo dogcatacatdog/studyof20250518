@@ -18,16 +18,13 @@
 
   <script>
 
-    let array = [[1,2],[3,4]];
-    let wrongarray = array + [6, 7];
-    // array의 첫 번째 요소([1,2])에 [6,7]을 concat시키는 방법
-    let newarray = [...array];
-    newarray[0] = newarray[0].concat([6, 7]); // OK
+    //spread operator
+    let a = {name : 'kim', age: 20};
+    let b = {country: 'korea'};
+    let c = {...a, ...b} //key값 기준 concat
 
-    //객체합치기 : {객체1} + {객체2} ->> {...객체1, ...객체2}
-
-  alert(array);
-  console.log(newarray);
+    alert(c);
+    console.log(c);
 
   </script>
 

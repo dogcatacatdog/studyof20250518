@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+ <body>
+
+ </body>
+
+    <input type="text" id="input" placeholder="Input customer name">
+    <select id="select">
+        <option value="10대">10대</option>
+        <option value="20대">20대</option>
+        <option value="30대">30대</option> </select>
+    <input type="text" id="input2" placeholder="Input customer address">
+    <button id="btn" onclick="makeObject()">Save in List</button>
+
+<script>
+    class Customer {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+    }
+
+    class Customer2 extends Customer {
+        constructor(name, age, address) {
+            super(name, age); // 부모의 constructor를 호출
+            this.address = address;
+        }
+    }
+    // 상속 : class 상속 받을 곳 exentd 상속 대상 
+    let customerObj = Customer2('kim', '20대', '서울시 강남구');
+    let customers = []; // 배열 생성
+    
+    function makeObject() {
+        const name = document.getElementById('input').value;
+        const age = document.getElementById('select').value;
+        const address = document.getElementById('input2').value;
+        const customerObj = new Customer2(name, age, address); // 객체 생성
+        customers.push(customerObj); // 배열에 누적 저장
+        console.log(customers); // 콘솔에서 확인 가능
+    }
+
+
+
+</script>
+
+</html>
