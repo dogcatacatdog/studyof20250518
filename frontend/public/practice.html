@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+ <style>
+
+ </style>
+ 
+ <body>
+
+     <button id="btn" onClick = "saveLocalStorage()">Save in LocalStorage</button>
+     <button id="btn" onClick = "saveSessionStorage()">Save in SessionStorage</button>
+     <input type="text" id="input" placeholder="Input your memo for saving">
+     <br>
+     <br>
+     <button id="btn" onClick = "getLocalStroage()">Call in LocalStorage</button>
+     <button id="btn" onClick = "getSessionStorage()">Call in SessionStorage</button>
+ 
+
+ </body>
+
+  <!-- local storage 저장하기
+  
+    localStorage.setItem('key', 'value');
+    localStorage.getItem('key');
+    localStorage.removeItem('key');
+  -->
+  <script>
+
+     function saveLocalStorage() {
+        const input = document.getElementById('input');
+        const value = input.value;
+        localStorage.setItem('memo', value);
+        alert('저장되었습니다.');
+     }
+     function saveSessionStorage() {
+        const input = document.getElementById('input');
+        const value = input.value;
+        sessionStorage.setItem('session', value);
+        alert('저장되었습니다.');
+     }
+
+     function getLocalStroage(){
+        const value = localStorage.getItem('memo');
+        alert(value);
+     }
+
+     function getSessionStorage(){
+        const value = sessionStorage.getItem('session');
+        alert(value);
+     }  
+  
+  </script>
+
+</html>
