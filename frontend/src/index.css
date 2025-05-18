@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: navy; /* 전체 화면 배경색을 navy로 설정 */
 }
 
 code {

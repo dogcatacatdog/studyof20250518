@@ -1,0 +1,44 @@
+.save-schedule-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  animation: fadeInUp 1s;
+}
+
+.save-schedule-form input[type="date"],
+.save-schedule-form input[type="time"],
+.save-schedule-form input[type="text"] {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #e3f0ff;
+  color: #1e3c72;
+  transition: box-shadow 0.2s;
+}
+
+.save-schedule-form input:focus {
+  box-shadow: 0 0 0 2px #2a5298;
+}
+
+.save-schedule-form button {
+  background: #2a5298;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.save-schedule-form button:hover {
+  background: #1e3c72;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
